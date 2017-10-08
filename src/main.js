@@ -5,6 +5,7 @@ import VueOnsen from 'vue-onsenui';
 // Onsen UI Styling and Icons
 require('onsenui/css-components-src/src/onsen-css-components.css');
 require('onsenui/css/onsenui.css');
+require('css/style.css');
 
 import App from './App.vue';
 
@@ -12,6 +13,6 @@ Vue.use(VueOnsen);
 
 new Vue({
   el: '#app',
-  template:'<app></app>',
-  components: { App, tab1, tab2 }
+  components: { App },
+  template: '<app></app>',
 });

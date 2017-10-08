@@ -1,21 +1,24 @@
-<template id="main">
-  <v-ons-navigator
+<template>
+  <v-ons-navigator swipeable
     :page-stack="pageStack"
-    @push-page="pageStack.push($event)">
-  </v-ons-navigator>
-  
+  ></v-ons-navigator>
 </template>
+
 <script>
+import pg1welcome from './pg1welcome.vue';
+import bus from './bus.js'
+
   export default{
     data() {
       return {
-        title: 'Noam v.098.vue'
+        pageStack: [pg1welcome]
       };
     },
-    methods: {
-      bla() {
-        //this.$ons.notification.alert('Onsen UI here');
-      }
+
+    created() {
+      bus.$on('push-page', (evt) => {
+        this.pageStack.push(evt)
+      })
     }
   };
 </script>

@@ -80,12 +80,15 @@ module.exports = {
     }, {
       test: /\.json$/,
       loader: 'json'
+    }, {
+      test: /\.s[a|c]ss$/,
+      loader: 'style!css!sass'
     }]
   },
-
   vue: {
     loaders: {
-      js: 'babel'
+      js: 'babel',
+      scss: 'style!css!sass'
     }
   },
 
