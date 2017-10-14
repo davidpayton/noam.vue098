@@ -49,6 +49,7 @@
 </template>
 
 <script>
+import store from './App.vue'
 import maintabbar from './components/maintabbar'
 export default {
   key: 'pg2main',
@@ -59,13 +60,13 @@ export default {
     }
   },
   data(){ return {
-      sharedState: store.state,
       msgBeaconFullname: "msgloc_ My Location 1",
       lblDirection: "Now pointing",
       msgDirection: "North-East",
       lblNear: "Near",
       lblInThisDirection: "In this direction",
-      lblInThisPlace: "In this building"
+      lblInThisPlace: "In this building",
+      sharedState: store.state
     };
   }
 }
