@@ -1,0 +1,63 @@
+<template id="main">
+  <v-ons-splitter>
+    <v-ons-splitter-side
+      swipeable width="150px" collapse="" side="left"
+      :open.sync="openSide"
+    >
+      <v-ons-page>
+        <v-ons-list>
+          <v-ons-list-item v-for="page in pages"
+            tappable modifier="chevron"
+            @click="currentPage = page; openSide = false"
+          >
+            <div class="center">{{ page }}</div>
+          </v-ons-list-item>
+        </v-ons-list>
+      </v-ons-page>
+    </v-ons-splitter-side>
+
+    <v-ons-splitter-content>
+      <component :is="currentPage" :toggle-menu="() => openSide = !openSide"></component>
+    </v-ons-splitter-content>
+  </v-ons-splitter>
+</template>
+
+<template id="home">
+  <v-ons-page>
+    <custom-toolbar title="Home" :action="toggleMenu"></custom-toolbar>
+    <p style="text-align: center">
+      Welcome home.
+    </p>
+  </v-ons-page>
+</template>
+
+<template id="news">
+  <v-ons-page>
+    <custom-toolbar title="News" :action="toggleMenu"></custom-toolbar>
+    <p style="text-align: center">
+      Some news here.
+    </p>
+  </v-ons-page>
+</template>
+
+<template id="settings">
+  <v-ons-page>
+    <custom-toolbar title="Settings" :action="toggleMenu"></custom-toolbar>
+    <p style="text-align: center">
+      Change the settings.
+    </p>
+  </v-ons-page>
+</template>
+
+<template id="toolbar">
+  <v-ons-toolbar>
+    <div class="left">
+      <v-ons-toolbar-button @click="action">
+        <v-ons-icon icon="ion-navicon, material:md-menu"></v-ons-icon>
+      </v-ons-toolbar-button>
+    </div>
+    <div class="center">{{ title }}</div>
+  </v-ons-toolbar>
+</template>
+
+<div id="app"></div>

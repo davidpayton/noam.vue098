@@ -1,0 +1,23 @@
+<template id="main">
+  <v-ons-page>
+    <v-ons-toolbar>
+      <div class="center">
+        <v-ons-segment tabbar-id="tabbar" :index.sync="segmentIndex" style="width: 180px">
+          <button>Page 1</button>
+          <button>Page 2</button>
+          <button>Page 3</button>
+        </v-ons-segment>
+      </div>
+    </v-ons-toolbar>
+
+    <v-ons-tabbar id="tabbar"
+      :tabs="tabs"
+      :index.sync="tabbarIndex"
+      @postchange="log('postchange event', $event)"
+    ></v-ons-tabbar>
+  </v-ons-page>
+</template>
+
+<div id="app"></div>
+<!--  remark: the segment part is already working nicely in my code in pg2main.vue ...
+but it has to be replaced with v-ons-seg... Right-->

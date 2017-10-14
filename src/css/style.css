@@ -1,0 +1,76 @@
+/* created by Pashute*/
+/*https://stackoverflow.com/questions/43269174/add-custom-font-to-a-cordova-project*/
+@font-face {
+  font-family: "Bauhaus 93";
+  src: url("../fonts/Bauhaus-93.ttf");
+}
+
+.hidetab {
+    display: none;  
+}
+
+/* row centered horizontally */
+.bar-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stretcher {
+   flex: 1;
+}
+
+.fontbau {
+    font-size: 130%;
+    font-family: "Bauhaus 93";
+}
+
+.appmargins {
+    width: 88%;
+}
+
+/* --- Accordion --- */
+/* see https://github.com/munsterlander/Onsen-Examples/tree/master/Accordion-List */
+.accordion {
+    transition: 0.4s;
+}
+
+
+.accordion:before {
+    margin-top: -3px;
+    content: '\02795';
+}
+
+.accordion.active:before {
+    content: "\2796";
+}
+
+div.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+.list__item__center {
+    padding-left: 5px;
+}
+
+/*
+.tbar-center {
+  text-align:center ;
+  -webkit-box-flex: 0 1 auto ;
+  -webkit-flex:  0 1 auto ;
+  -moz-box-flex:  0 1 auto ;
+  -moz-flex:  0 1 auto ;
+  -ms-flex:  0 1 auto ;
+  flex:  0 1 auto ;
+  width: 50% ;
+  margin:auto ;
+}
+*/
