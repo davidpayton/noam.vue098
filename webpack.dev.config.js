@@ -45,7 +45,8 @@ module.exports = {
     unsafeCache: true,
 
     alias: {
-      vue:'vue/dist/vue.common.js'
+      vue:'vue/dist/vue.common.js',
+      vuex:'vuex/dist/vuex.common.js'
     }
   },
 

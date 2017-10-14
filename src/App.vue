@@ -1,7 +1,9 @@
 <template>
-  <v-ons-navigator swipeable
+<div>
+<v-ons-navigator swipeable
     :page-stack="pageStack"
-  ></v-ons-navigator>
+></v-ons-navigator>
+</div>
 </template>
 
 <script>
@@ -21,4 +23,16 @@ import bus from './bus.js'
       })
     }
   };
+  const store = new Vuex.Store({
+    debug: true,
+    state: {
+      tabidx : 1
+    },
+    mutations: {
+      tabto(idx){
+        if (this.debug) console.log('tabto: ', idx )
+        state.tabidx = i
+      }
+    }
+  })
 </script>
