@@ -5,8 +5,10 @@
   src: url("../fonts/Bauhaus-93.ttf");
 }
 
+/* bg color: #A19D97 */
+
 .hidetab {
-    display: none;  
+    display: none;
 }
 
 /* row centered horizontally */

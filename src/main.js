@@ -1,7 +1,7 @@
 import 'onsenui';
 import Vue from 'vue';
-import Vuex from 'vuex';
 import VueOnsen from 'vue-onsenui';
+import store from './store.js'
 
 // Onsen UI Styling and Icons
 import 'onsenui/css-components-src/src/onsen-css-components.css';
@@ -11,10 +11,10 @@ import 'css/style.css';
 import App from './App.vue';
 
 Vue.use(VueOnsen);
-Vue.use(Vuex);
 
 new Vue({
   el: '#app',
+  store,
   components: { App },
   template: '<app></app>',
 });

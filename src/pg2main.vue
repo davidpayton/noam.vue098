@@ -56,7 +56,7 @@ export default {
   components: { maintabbar },
   methods: {
     isTabSelected(i){
-      return true;//(this.sharedState.tabidx == i);
+      return true;// (this.sharedState.tabidx == i);
     }
   },
   data(){ return {
@@ -65,7 +65,8 @@ export default {
       msgDirection: "North-East",
       lblNear: "Near",
       lblInThisDirection: "In this direction",
-      lblInThisPlace: "In this building"//,
+      lblInThisPlace: "In this building"
+      //,
       //sharedState: store.state
     };
   }
