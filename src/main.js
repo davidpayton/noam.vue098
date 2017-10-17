@@ -1,7 +1,7 @@
 import 'onsenui';
 import Vue from 'vue';
 import VueOnsen from 'vue-onsenui';
-import store from './store.js'
+import store from './store.js' 
 
 // Onsen UI Styling and Icons
 import 'onsenui/css-components-src/src/onsen-css-components.css';

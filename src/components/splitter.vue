@@ -1,30 +1,41 @@
 <template>
-  <div id="splitter">
-      <ons-page id="splitter1page">
-        <ons-splitter id="splitter.page">
-          <ons-splitter-side id="menu" side="right" width="150px" collapse swipeable>
-            <ons-page id="menu-page">
-              <ons-list>
-                <ons-list-item tappable><!-- onclick="menuChosen('settings.html')" -->
-                  <i class="fa fa-cog"></i>&nbsp;<span id="lblsettings">Settings</span>
-                </ons-list-item>
-                <ons-list-item tappable><!-- onclick="menuChosen('help.html') -->
-                  <i class="fa fa-question-circle"></i>&nbsp;<span id="lblhelp">Help</span>
-                </ons-list-item>
-              </ons-list>
-            </ons-page>
-          </ons-splitter-side>
-          <ons-splitter-content id="splitter.content" page="main.html"></ons-splitter-content>
-        </ons-splitter>
-      </ons-page>
-    </ons-template>
-  </div>
-</template>
-<script>
-export default {
-  name: "splitter",
-  data: () => ({})
-}
-</script>
-<style lang="scss" scoped>
-</style>
+<v-ons-splitter>
+    <v-ons-splitter-side
+      swipeable width="150px" collapse="" side="left"
+      :open.sync="openSide"
+    >
+      <v-ons-page>
+        <v-ons-list>
+          <v-ons-list-item v-for="page in pages"
+            tappable modifier="chevron"
+            @click="currentPage = page; openSide = false"
+          >
+            <div class="center">{{ page }}</div>
+          </v-ons-list-item>
+        </v-ons-list>
+      </v-ons-page>
+    </v-ons-splitter-side>
+
+    <v-ons-splitter-content>
+      <component :is="currentPage" :toggle-menu="() => openSide = !openSide"></component>
+    </v-ons-splitter-content>
+  </v-ons-splitter>
+  </template>
+  <script>
+  import test1 from '../components/test1'
+  import test2 from '../components/test2'
+  export default {
+    data(){
+      return {
+        currentPage: 'test1',
+        pages: ['test1', 'test2'],
+        openSide: false
+      };
+    },
+     components: {
+       test1,
+       test2,
+     },
+  };
+
+  </script>

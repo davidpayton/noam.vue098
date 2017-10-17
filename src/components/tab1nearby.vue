@@ -1,3 +1,4 @@
+<!-- this is meant to be used as the tab card components, not what wer'e doing now -->
 <template>
   <ons-page id="tab1nearby">
     nearby
@@ -9,7 +10,7 @@ export default {
   name: "tab1nearby",
   //props: [myprop],
   data: () => ({
-     
+
   })
 }
 </script>

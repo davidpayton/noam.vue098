@@ -1,8 +1,8 @@
 <template>
 <div>
-<v-ons-navigator swipeable
-    :page-stack="pageStack"
-></v-ons-navigator>
+  <v-ons-navigator swipeable
+      :page-stack="pageStack"
+  ></v-ons-navigator>
 </div>
 </template>
 

@@ -1,5 +1,7 @@
 <template>
-  <ons-page id="main.page">
+  <v-ons-page id="pg2main"> <!-- changed from id="page.main" -->
+    <splitter></splitter>
+    <!-- I think. OR: you have to give the template an id... or its automatically by vue pg2main.vue -->
     <div id="mainpg-toolbar" class="ons-toolbar bar-center">
       <button class="toolbar-button">
         <i class="fa fa-comments" style="font-size:17px"></i>
@@ -33,6 +35,9 @@
       </div>
     </div>
 
+
+
+    <!-- todo: Rafael in future to make these into components. Not now... -->
     <v-ons-card id="card1" :class="{'hidetab' : !isTabSelected(1)}">
       <div class="title">{{lblNear}} {{msgBeaconFullname}}</div>
       here goes the accordion
@@ -45,18 +50,18 @@
       <div class="title">{{lblInThisPlace}}</div>
       here goes the accordion 3
     </v-ons-card>
-  </ons-page>
+  </v-ons-page>
 </template>
 
 <script>
-import store from './App.vue'
 import maintabbar from './components/maintabbar'
+import splitter from './components/splitter'
 export default {
   key: 'pg2main',
-  components: { maintabbar },
+  components: { maintabbar, splitter },
   methods: {
     isTabSelected(i){
-      return true;// (this.sharedState.tabidx == i);
+      return (this.$store.state.tabidx == i);
     }
   },
   data(){ return {
@@ -65,10 +70,8 @@ export default {
       msgDirection: "North-East",
       lblNear: "Near",
       lblInThisDirection: "In this direction",
-      lblInThisPlace: "In this building"
-      //,
-      //sharedState: store.state
+      lblInThisPlace: "In this building",
     };
-  }
+  },
 }
 </script>

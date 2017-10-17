@@ -1,3 +1,6 @@
+<!-- this is not used yet
+TODO: Rafael to change the cards in pg2main to use these...
+nothing to do with splitter -->
 <template>
   <ons-page id="tab2thisway">
     this way

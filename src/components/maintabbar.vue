@@ -2,11 +2,11 @@
   <div id="maintabbar">
     <div id="maintabbaralign" class="bar-center">
       <v-ons-segment id="maintabs" style="width: 98%;">
-        <button class="segment__item" @click="sharedState(1)">{{lblTab1}}</button>
-        <button class="segment__item" @click="sharedState(2)">
+        <button class="segment__item" @click="tabto(1)">{{lblTab1}}</button>
+        <button class="segment__item" @click="tabto(2)">
           {{lblTab2}}
           <i class="fa fa-hand-o-up" style="fong-size:17px"></i></button>
-        <button class="segment__item" @click="sharedState(3)">
+        <button class="segment__item" @click="tabto(3)">
            <span id="lbl-inspace">{{lblTab3}}</span></button>
       </v-ons-segment>
     </div>
@@ -28,7 +28,7 @@ export default {
   },
 
   methods: {
-    sharedState(idx) {
+    tabto(idx) {
       this.$store.commit('tabto', idx)
     }
   },
