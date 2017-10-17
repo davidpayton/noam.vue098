@@ -1,7 +1,6 @@
 <template>
-  <v-ons-page id="pg2main"> <!-- changed from id="page.main" -->
-    <!-- I think. OR: you have to give the template an id... or its automatically by vue pg2main.vue -->
-    <!-- <splitter></splitter> -->
+  <v-ons-page id="pg2mainpage"> <!-- changed from id="page.main" -->
+    <splitter></splitter>
 
     <div id="mainpg-toolbar" class="ons-toolbar bar-center">
       <button class="toolbar-button">
@@ -16,7 +15,7 @@
       <button id="mainpage-menubtn" class="toolbar-button pull-right"><!-- onclick="openMenu(2)"> -->
         <!-- toolbar-button-outline -->
         <i class="fa fa-ellipsis-v" style="font-size:17px"></i>
-        <!-- if no icons: Settings-->
+        <!-- if no icons: More... -->
       </button>
     </div>
 
