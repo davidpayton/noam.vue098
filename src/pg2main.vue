@@ -1,6 +1,8 @@
 <template>
   <v-ons-page id="pg2main"> <!-- changed from id="page.main" -->
     <!-- I think. OR: you have to give the template an id... or its automatically by vue pg2main.vue -->
+    <!-- <splitter></splitter> -->
+
     <div id="mainpg-toolbar" class="ons-toolbar bar-center">
       <button class="toolbar-button">
         <i class="fa fa-comments" style="font-size:17px"></i>
@@ -18,10 +20,14 @@
       </button>
     </div>
 
-    <v-ons-toolbar id="loc-tbar" class="bar-center">
-      <button class="toolbar-button"><span id="msgbeacon">{{msgBeaconFullname}}</span></button>
-    </v-ons-toolbar>
     <maintabbar></maintabbar>
+    <!-- <v-ons-toolbar id="loc-tbar" class="txt-center"> -->
+    <div id="loc-tbar" class="ons-toolbar bar-center">
+      <button class="toolbar-button">
+        <span id="msgbeacon">{{msgBeaconFullname}}</span><br />
+      </button>
+    </div>
+    <!-- </v-ons-toolbar> -->
 
     <div id="orientation-line">
       <div id="orient-tbar" class="ons-toolbar bar-center">
@@ -34,17 +40,26 @@
       </div>
     </div>
 
-
-
     <!-- todo: Rafael in future to make these into components. Not now... -->
     <v-ons-card id="card1" :class="{'hidetab' : !isTabSelected(1)}">
-      <div class="title">{{lblNear}} {{msgBeaconFullname}}</div>
-      here goes the accordion
+      <div class="title bar-center">{{lblNear}} {{msgBeaconFullname}}</div>
+      <div class="content" style="overflow: auto"></div>
+        <v-ons-list>
+            <!-- <v-ons-list-header></v-ons-list-header> -->
+            <v-ons-list-item>accordion 1</v-ons-list-item>
+            <v-ons-list-item>accordion 2</v-ons-list-item>
+            <v-ons-list-item>accordion 3</v-ons-list-item>
+            <v-ons-list-item>accordion 4</v-ons-list-item>
+            <v-ons-list-item>accordion 5</v-ons-list-item>
+            <v-ons-list-item>accordion 6</v-ons-list-item>
+            <v-ons-list-item>accordion 7</v-ons-list-item>
+            <v-ons-list-item>accordion 8</v-ons-list-item>
+            <v-ons-list-item>accordion 9</v-ons-list-item>
+        </v-ons-list>
+      </div>
     </v-ons-card>
     <v-ons-card id="card2" :class="{'hidetab' : !isTabSelected(2)}">
-      <v-ons-page>
-        <splitter></splitter>
-      </v-ons-page>
+        card 2 content here with accordion
     </v-ons-card>
     <v-ons-card id="card3" :class="{'hidetab' : !isTabSelected(3)}">
       <div class="title">{{lblInThisPlace}}</div>

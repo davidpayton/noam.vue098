@@ -1,8 +1,8 @@
 <template>
   <v-ons-page>
-    <custom-toolbar title="Home" :action="toggleMenu"></custom-toolbar>
+    <custom-toolbar title="Settings" :action="toggleMenu"></custom-toolbar>
     <p style="text-align: center">
-      Welcome home.
+      Settings.
     </p>
   </v-ons-page>
 </template>

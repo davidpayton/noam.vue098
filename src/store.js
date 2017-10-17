@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-Vue.use(Vuex); 
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   debug: true,
@@ -10,7 +10,7 @@ export default new Vuex.Store({
   },
   mutations: {
     tabto(state, idx){
-      console.log(this.state.tabidx)
+      //console.log(this.state.tabidx)
       state.tabidx = idx
     }
   }

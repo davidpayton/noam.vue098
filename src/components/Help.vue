@@ -1,8 +1,8 @@
 <template>
   <v-ons-page>
-    <custom-toolbar title="Settings" :action="toggleMenu"></custom-toolbar>
+    <custom-toolbar title="Help" :action="toggleMenu"></custom-toolbar>
     <p style="text-align: center">
-      Change the settings.
+      Help me !!
     </p>
   </v-ons-page>
 </template>
