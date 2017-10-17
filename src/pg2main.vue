@@ -1,6 +1,5 @@
 <template>
   <v-ons-page id="pg2main"> <!-- changed from id="page.main" -->
-    <splitter></splitter>
     <!-- I think. OR: you have to give the template an id... or its automatically by vue pg2main.vue -->
     <div id="mainpg-toolbar" class="ons-toolbar bar-center">
       <button class="toolbar-button">
@@ -43,8 +42,9 @@
       here goes the accordion
     </v-ons-card>
     <v-ons-card id="card2" :class="{'hidetab' : !isTabSelected(2)}">
-      <div class="title">{{lblInThisDirection}}:</div>
-      here goes the accordion 2
+      <v-ons-page>
+        <splitter></splitter>
+      </v-ons-page>
     </v-ons-card>
     <v-ons-card id="card3" :class="{'hidetab' : !isTabSelected(3)}">
       <div class="title">{{lblInThisPlace}}</div>

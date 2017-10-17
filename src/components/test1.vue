@@ -1,11 +1,17 @@
 <template>
   <v-ons-page>
-    <h1>test 1</h1>
+    <custom-toolbar title="Home" :action="toggleMenu"></custom-toolbar>
+    <p style="text-align: center">
+      Welcome home.
+    </p>
   </v-ons-page>
 </template>
 <script>
+import customToolbar from './customToolbar'
+
 export default {
-  key: 'test1'
+  props: ['toggleMenu'],
+  components: { customToolbar },
 }
 </script>
 <style>
