@@ -12,10 +12,12 @@
         <span class="fontbau">noam</span>
       </button>
       <span class="stretcher"></span>
-      <button id="mainpage-menubtn" class="toolbar-button pull-right"><!-- onclick="openMenu(2)"> -->
+      <button id="mainpage-menubtn" class="toolbar-button pull-right">
+        <!-- onclick="openMenu(2)"> -->
         <!-- toolbar-button-outline -->
+        <!-- == the menu icon!  == -->
         <i class="fa fa-ellipsis-v" style="font-size:17px"></i>
-        <!-- if no icons: More... -->
+        <!-- if setup to run with no icons, text: "More..." -->
       </button>
     </div>
 
