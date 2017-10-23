@@ -50,7 +50,6 @@
   // 6. Inside settings.vue when button "DONE " pressed, go back to page2main.
   // Suggestion: Maybe this should be done with the navigator defined in App.Vue,
   //    the "push" is used in the pg1welcome page on line 25
-
   import pg2main from '../pg2main'
   // todo: improve: remove extra ../components from path
   import settings from '../components/Settings'

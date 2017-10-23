@@ -7,11 +7,11 @@
   </v-ons-page>
 </template>
 <script>
-import customToolbar from './customToolbar'
+import customToolbar from './toptoolbar'
 
 export default {
   props: ['toggleMenu'],
-  components: { customToolbar },
+  components: { topToolbar },
 }
 </script>
 <style>

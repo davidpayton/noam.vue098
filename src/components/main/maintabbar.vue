@@ -7,7 +7,7 @@
           {{lblTab2}}
           <i class="fa fa-hand-o-up" style="fong-size:17px"></i></button>
         <button class="segment__item" @click="tabto(3)">
-           <span id="lbl-inspace">{{lblTab3}}</span></button>
+           <span id="lbl-inspace">{{lblTab3}} {{msgPlace}}</span></button>
       </v-ons-segment>
     </div>
   </div>
@@ -22,8 +22,9 @@ export default {
       //x tabidx: 1,
       lblTab1: "Nearby",
       lblTab2: "This way",
-      lblTab3: "In building",
-      state: this.$store.state,
+      lblTab3: "In ",
+      msgPlace: "the building"
+      //state: this.$store.state, // why do I need state in maintabbar.data?
     }
   },
 
