@@ -14,15 +14,15 @@
 </template>
 <script>
 //import maincontent from './maincontent'
-import settings from './settings'
-import help from './help'
+import settings from '../more/settings/settings'
+import help from '../more/help/help'
 
 
 export default {
   name: "mainmenu",
   computed: {
     currentPage: {
-      get: function(){ return this.$store.state.currentPage; }
+      get: function(){ return this.$store.state.currentPage; },
       set: function(newValue){ this.$store.commit('setCurrentPagename', newValue)}
     }
   },
@@ -35,5 +35,3 @@ export default {
   })
 }
 </script>
-<style lang="scss" scoped>
-</style>

@@ -29,12 +29,12 @@
   </div>
 </template>
 <script>
-import toptoolbar from './toptoolbar'
+import toptoolbar from '../toptoolbar'
 import maintabbar from './maintabbar'
 
 import tab1nearby from './tab1nearby'
 import tab2thisway from './tab2thisway'
-import tab3inplace from '.tab3inplace'
+import tab3inplace from './tab3inplace'
 
 export default {
   name: "maincontent",
@@ -42,15 +42,16 @@ export default {
     toptoolbar, maintabbar,
     tab1nearby, tab2thisway, tab3inplace
   },
-  data: () => ({
-    // orientation line
-    lblNowPointing: "Now pointing",
-    msgDirection: "North-East",
+  data(){
+    return {
+      // orientation line
+      lblNowPointing: "Now pointing",
+      msgDirection: "North-East",
 
-    // location line
-    lblInThisDirection: "In this direction",
-    lblInThisPlace: "In this __",
-    msgBeaconFullname: "msgloc_ My Location 1",
-  })
+      // location line
+      lblInThisDirection: "In this direction",
+      msgBeaconFullname: "msgloc_ My Location 1"
+    }
+  }
 }
 </script>

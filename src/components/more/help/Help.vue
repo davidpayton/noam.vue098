@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page>
+  <v-ons-page id="help">
     <custom-toolbar title="Help" :action="toggleMenu"></custom-toolbar>
     <p style="text-align: center">
       Help me !!
@@ -7,7 +7,7 @@
   </v-ons-page>
 </template>
 <script>
-import customToolbar from './customToolbar'
+import customToolbar from '../../toptoolbar'
 
 export default {
   props: ['toggleMenu'],

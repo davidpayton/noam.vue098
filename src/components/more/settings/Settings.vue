@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page>
+  <v-ons-page id="settings">
     <custom-toolbar title="Settings" :action="toggleMenu"></custom-toolbar>
     <p style="text-align: center">
       Settings.
@@ -7,11 +7,11 @@
   </v-ons-page>
 </template>
 <script>
-import customToolbar from './toptoolbar'
+import toptoolbar from '../../toptoolbar'
 
 export default {
   props: ['toggleMenu'],
-  components: { topToolbar },
+  components: { toptoolbar },
 }
 </script>
 <style>

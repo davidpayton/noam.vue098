@@ -6,7 +6,7 @@
         swipeable width="150px"
         collapse=""
         side="right"
-        :open.sync="menuShow"
+        :open.sync="menuShown"
       >
       </v-ons-splitter-side>
 
@@ -32,8 +32,8 @@ import mainmenu    from './components/main/mainmenu'
 
 // todo: try remove these or the latter two, and in data.pages below
 import maincontent from './components/main/maincontent'
-import settings    from './components/main/settings'
-import help        from './components/main/help'
+import settings    from './components/more/settings/settings'
+import help        from './components/more/help/help'
 
 export default {
   key: 'pg2main',
@@ -43,7 +43,7 @@ export default {
       menuShown: this.$store.state.menuShown,
       // todo: try remove these or the latter two
       pages: [ maincontent, settings, help ],
-      currentPage: this.$store.state.currentPagename,
+      currentPage: this.$store.state.currentPagename
     };
   },
 }

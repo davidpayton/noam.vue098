@@ -2,7 +2,7 @@
   <div id="toptoolbar">
     <v-ons-toolbar id="mainpg-toolbar" class="bar-center">
       <button class="toolbar-button">
-        <i class="fa fa-comments" class="toptoolbar-icon"></i>
+        <i class="fa fa-comments toptoolbar-icon"></i>
         <!-- todo: if no icons: Assist -->
       </button>
       <span class="stretcher"></span>
