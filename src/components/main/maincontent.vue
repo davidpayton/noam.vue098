@@ -1,18 +1,21 @@
 <template>
-  <div id="maincontent">
+  <v-ons-page id="maincontent">
     <!--  === mainToolbar component  (talk | NOAM  | ...) -->
+<!--
+  PROBLEM: page content pushed to left (top-toolbar not full width)
+-->
     <toptoolbar></toptoolbar>
-    <maintabbar></maintabbar>
     <!-- <v-ons-toolbar id="loc-tbar" class="txt-center"> -->
-    <div id="location-line" class="ons-toolbar bar-center">
-      <button class="toolbar-button">
+    <div id="location-line" class="bar-center">
+      <div><!-- class smaller centered text -->
+      <!-- class="toolbar-button"> -->
         <span id="msgbeacon">{{msgBeaconFullname}}</span><br />
-      </button>
+      </div>
     </div>
-    <!-- </v-ons-toolbar> -->
+    <maintabbar></maintabbar>
 
     <div id="orientation-line">
-      <div id="orient-tbar" class="ons-toolbar bar-center">
+      <div id="orient-tbar" class="bar-center">
         <button class="toolbar-button">
           <small>
             <strong>{{lblNowPointing}}:</strong>
@@ -23,10 +26,12 @@
     </div>
 
     <!-- === tabs === -->
+
     <tab1nearby></tab1nearby>
     <tab2thisway></tab2thisway>
     <tab3inplace></tab3inplace>
-  </div>
+
+</v-ons-page>
 </template>
 <script>
 import toptoolbar from '../toptoolbar'

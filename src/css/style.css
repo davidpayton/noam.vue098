@@ -1,5 +1,5 @@
 /* created by Pashute*/
-/*https://stackoverflow.com/questions/43269174/add-custom-font-to-a-cordova-project*/
+
 @font-face {
   font-family: "Bauhaus 93";
   src: url("../fonts/Bauhaus-93.ttf");
@@ -16,6 +16,7 @@
 }
 /* row centered horizontally */
 .bar-center {
+    /*width: 80% !important;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,8 +31,13 @@
     font-family: "Bauhaus 93";
 }
 
-.appmargins {
-    width: 88%;
+.bar-margins {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.topmargin {
+    margin-top: 5px !important;
 }
 
 /* --- Accordion --- */
@@ -41,13 +47,13 @@
 }
 
 
-.accordion:before {
+.accordion::before {
     margin-top: -3px;
     content: '\02795';
 }
 
-.accordion.active:before {
-    content: "\2796";
+.accordion.active::before {
+    content: '\2796';
 }
 
 div.panel {
@@ -66,13 +72,25 @@ div.panel.show {
     padding-left: 5px;
 }
 
-/* ----- style ----  */
+/* ----- override color and style ----  */
+
+/*.segment__input:checked {
+  background: olive;
+}*/
+
+.txt-ok{ color: black; }
+
+/*button:active { background: olive; }*/
+button { color: black !important; }
+.toolbar-button{ color: #444444; }
 .list-item{
-  color: rgba(38, 100, 171, .81);
+  color: #444444; /*#A19D97*/
+  /*color: rgba(38, 100, 171, .81);*/
 }
 
 .page{
-  color: rgba(38, 100, 171, .81);
+  color: #444444; /*#A19D97*/
+  /*color: rgba(38, 100, 171, .81);*/
 }
 /*
 .tbar-center {

@@ -17,6 +17,7 @@ export default new Vuex.Store({
     },
     toggleMenu(state){
       state.menuShown = !state.menuShown
+      console.log("dbg " + state.menuShown)
     },
     setCurrentPagename(state, pagename){
       state.currentPage = pagename

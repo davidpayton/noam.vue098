@@ -1,13 +1,15 @@
 <template>
-  <v-ons-page> <!-- changed from id="page.main" -->
+  <v-ons-page id="pg2main">
     <v-ons-splitter>
       <!-- todo: move v-ons-splitter-side into components/mainmenu.vue  -->
       <v-ons-splitter-side
-        swipeable width="150px"
         collapse=""
         side="right"
+        width="150px"
         :open.sync="menuShown"
       >
+      <!--  swipeable width="150px" -->
+      <mainmenu></mainmenu>
       </v-ons-splitter-side>
 
       <!-- === Background Content ===  -->
@@ -20,8 +22,6 @@
 
       </v-ons-splitter-content>
     </v-ons-splitter>
-
-
   </v-ons-page>
 </template>
 
@@ -36,6 +36,7 @@ import settings    from './components/more/settings/settings'
 import help        from './components/more/help/help'
 
 export default {
+  name: 'pg2main',
   key: 'pg2main',
   components: { mainmenu, maincontent }, // todo: try remove maincontent
   data(){

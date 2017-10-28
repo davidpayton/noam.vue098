@@ -1,20 +1,20 @@
-<template id="maintabbar">
-  <div id="maintabbar">
-    <div id="maintabbaralign" class="bar-center">
-      <v-ons-segment id="maintabs" style="width: 98%;">
-        <button class="segment__item" @click="tabto(1)">{{lblTab1}}</button>
-        <button class="segment__item" @click="tabto(2)">
-          {{lblTab2}}
-          <i class="fa fa-hand-o-up" style="fong-size:17px"></i></button>
-        <button class="segment__item" @click="tabto(3)">
-           <span id="lbl-inspace">{{lblTab3}} {{msgPlace}}</span></button>
-      </v-ons-segment>
-    </div>
+<template>
+  <div id="maintabbar" class="bar-center topmargin">
+    <!-- <div id="maintabbaralign" > -->
+    <v-ons-segment id="maintabs" style="width: 98%;">
+      <button class="segment__item" @click="tabto(1)">{{lblTab1}}</button>
+      <button class="segment__item" @click="tabto(2)">
+        {{lblTab2}}
+        <i class="fa fa-hand-o-up" style="fong-size:17px"></i></button>
+      <button class="segment__item" @click="tabto(3)">
+         <span id="lbl-inspace">{{lblTab3}} {{msgPlace}}</span></button>
+    </v-ons-segment>
+    <!-- </div> -->
   </div>
 </template>
 
 <script>
-import tab1nearby from './tab1nearby'
+//import tab1nearby from './tab1nearby'
 export default {
   name: "maintabbar",
   data(){
@@ -32,10 +32,9 @@ export default {
     tabto(idx) {
       this.$store.commit('tabto', idx)
     }
-  },
-
-  created() {
+  }//,
+  //created() {
     //console.log(this.$store.state)
-  }
+  //}
 }
 </script>
